@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>fbZone's - Civil Servant</title>
     
 </head>
-<body onload="youDeserve();">
-    <div style="width:500px;margin: auto;">
-        Hey <div id="username" style="display:inline-block"></div>.....!
-        <div id="ydtext">You deserve:</div>
-        <div id="ujob" style="display:inline-block;font-weight:bold;"/>
+<body  style="background-color:silver" onload="youDeserve();">
+    <div style="width:800px;margin: auto;">
+	<div style="display:inline-block;font-size:30px;color:red;font-weight:bold;font-style:italic;font-family:Comic Sans MS;">Which Civil Servant are you?</div>
+	<div style="margin:auto;width:500px;font-family:OCR A Std, monospace;">
+        <div style="display:inline-block;font-size:30px;">Hey</div> 
+		<div id="username" style="display:inline-block;font-size:30px;"></div>
+	</div>
+        <div id="ydtext" style="font-size:20px;">You deserve:</div>
+        <div id="ujob" style="display:inline-block;font-size:50px;font-style:italic;font-family:cursive;"/>
     </div>
     <script>
     function youDeserve()
@@ -61,12 +65,12 @@
         {document.getElementById("username").innerHTML = "Oops";
         document.getElementById("ydtext").style.display="none";} 
         else
-        {document.getElementById("username").innerHTML = person;
+        {document.getElementById("username").innerHTML = person+"....!";
         document.getElementById("username").style.fontWeight="bold";
         var yourjobcode=Math.floor(Math.random() * 39);
         document.getElementById("ujob").innerHTML= job[yourjobcode];}
     }
-    setInterval(blinktext, 600);
+    setInterval(blinktext, 350);
         var txt = document.getElementById("ujob").innerHTML;
         var count = 3;
         function blinktext() {
@@ -75,6 +79,7 @@
                 cntrl.style.display='none';
             else
                 cntrl.style.display='block';
+				cntrl.style.color='blue';
             count++;
         }
     </script>
