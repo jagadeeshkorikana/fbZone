@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body onload="youDeserve();">
+    <div style="width:500px;margin: auto;">
+        Hey <div id="username" style="display:inline-block"></div>.....!
+        <div id="ydtext">You deserve:</div>
+        <div id="ujob" style="display:inline-block;font-weight:bold;"/>
+    </div>
+    <script>
+    function youDeserve()
+    {
+        var job = ["Deputy Collectors in A.P. Civil Service (Executive Branch).",
+        "Commercial Tax Officers in A.P. Commercial Taxes Service.",
+        "District Registrar in A.P. Registration and Stamps Service.",
+        "Deputy Supdt. of Police (Civil) Cat-2 in A.P. Police Service.",
+        "Assistant Prohibition & Excise Superintendent in A.P. Prohibition & Excise Service.",
+        "District B.C. Welfare Officer in A.P B.C. Welfare Service.",
+        "Municipal Commissioner Grade-II in A.P. Municipal Administration Service.",
+        "Assistant Commissioner of Labour in A.P Labour Service.",
+        "Municipal Commissioner Grade-III in A.P. Municipal Commissioner Subordinate Service.",
+        "Asst. Commercial Tax Officer in A.P. Commercial Taxes Sub- ordinate Service.",
+        "Sub-Registrar Grade-II in A.P Registration Sub -ordinate Service.",
+        "Deputy Tahsildar in A.P. Revenue Subordinate Service.",
+        "Assistant Labour Officer in A.P. Labour & Employment Sub- ordinate Service.",
+        "Assistant Development Officers in A.P. Handloom & Textile Department.",
+        "Extension Officer in PR & RD Department.",
+        "Prohibition & Excise Sub Inspector in A.P. Prohibition & Excise Sub-Service.",
+        "Assistant Section Officer (GAD) in A.P. Secretariat Sub. Service.",
+        "Assistant Section Officer (Finance Dept.,) in A.P. Secretariat Sub ordinate Service.",
+        "Assistant Section Officer (Law Dept.,) in A.P. Secretariat Sub ordinate Service.",
+        "Assistant Section Officer (Legislature Dept.,) in A.P. Legislature Secretariat Service.",
+        "Senior Auditor in A.P. State Audit Subordinate Service.",
+        "Senior Accountant in A.P. Treasuries & Accounts (HOD) Sub Service.",
+        "Senior Accountant in A.P. Treasuries & Accounts (District Sub Service.",
+        "Junior Accountant in various Department in A.P Treasuries & Accounts Sub-Service.",
+        "Junior Assistants in Government Examination in A.P. Ministerial Service.",
+        "Junior Assistants Labour Department in A.P. Ministerial Service.",
+        "Junior Assistants in PH & ME Dept., in A.P. Ministerial Service.",
+        "Junior Assistants in A.P. Transport Department.",
+        "Junior Assistants in A.P. Director General of Prisons & Correctional Services).",
+        "Junior Assistants in A.P. Women Development Child welfare Department.",
+        "Junior Assistants in A.P. Drugs & Copy Rights Departments.",
+        "Junior Assistant in A.P. Agriculture Department. Junior Assistant (Chief Commissioner of Land Administration).",
+        "Junior Assistant in Prohibition & Excise Department.",
+        "Junior Assistant in sugar and Cane Department.",
+        "Junior Assistant in A.P Roads & Building Department.",
+        "Junior Assistant in Survey Settlement Department.",
+        "Junior Assistant in A.P Civil Supplies Department.",
+        "Junior Assistant in A.P BC-Welfare Department Junior Assistant in A.P Anti Corruption Bureau).",
+        "Senior Accountant in A.P Insurance(Directorate).",
+        "Senior Accountant In Insurance A.P.G.L.I Sub-Service."];
+        var person = prompt("Name:","");
+        if (person == null || person == "") 
+        {document.getElementById("username").innerHTML = "Oops";
+        document.getElementById("ydtext").style.display="none";} 
+        else
+        {document.getElementById("username").innerHTML = person;
+        document.getElementById("username").style.fontWeight="bold";
+        var yourjobcode=Math.floor(Math.random() * 39);
+        document.getElementById("ujob").innerHTML= job[yourjobcode];}
+    }
+    setInterval(blinktext, 600);
+        var txt = document.getElementById("ujob").innerHTML;
+        var count = 3;
+        function blinktext() {
+            var cntrl = document.getElementById("ujob");
+            if (count % 2 == 0)
+                cntrl.style.display='none';
+            else
+                cntrl.style.display='block';
+            count++;
+        }
+    </script>
+</body>
+</html>
